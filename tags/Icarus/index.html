@@ -178,22 +178,26 @@
 <ul>
 <li>다음 버튼을 클릭합니다</li>
 </ul>
-<p><img src="/images/enter_disqus_1.png" alt="Select install disqus" width="300" height="400"></p>
+<p style="text-align:center"><br><img src="/images/enter_disqus_1.png" alt="Select install disqus" width="300" height="400"><br></p>
+
 <p><strong>2.2 Create a new site</strong></p>
 <ul>
 <li>Website Name 은 Icarus theme _config.yml 에 연결해줄 명칭으로 사용됩니다.</li>
 <li>Category 는 자신의 웹사이트 목적에 맞추어 선택합니다.</li>
 </ul>
-<p><img src="/images/enter_disqus_2.png" alt="Create a new site" width="400" height="500"></p>
+<p style="text-align:center"><br><img src="/images/enter_disqus_2.png" alt="Create a new site" width="400" height="500"><br></p>
+
 <p><strong>2.3 What platform is your site on?</strong></p>
 <ul>
 <li>자신의 Blog 의 플랫폼을 선택하며, Hexo 의 경우 목록에 없으므로 최하단 버튼을 선택합니다.</li>
 </ul>
-<p><img src="/images/enter_disqus_3.png" alt="Select platform" width="500" height="600"></p>
+<p style="text-align:center"><br><img src="/images/enter_disqus_3.png" alt="Select platform" width="500" height="600"><br></p>
+
 <hr>
 <h2 id="3-Discus-연동-코드-적용하기"><a href="#3-Discus-연동-코드-적용하기" class="headerlink" title="3. Discus 연동 코드 적용하기"></a><strong>3. Discus 연동 코드 적용하기</strong></h2><hr>
 <p>2번의 절차를 마치고 나면 다음과 같은 창을 확인합니다.</p>
-<p><img src="/images/enter_disqus_4.png" alt="Set config" width="300" height="300"></p>
+<p style="text-align:center"><br><img src="/images/enter_disqus_4.png" alt="Set config" width="300" height="300"><br></p>
+
 <ul>
 <li>../themes/icarus/layout/disqus.ejs 파일을 오픈합니다.</li>
 <li><p>최초 파일 오픈시 다음과 같은 형태로 작성되어 있습니다.</p>
@@ -277,17 +281,17 @@ comment:
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        2
+                        3
                     </p>
                 </div>
             </div>
             <div class="level-item has-text-centered is-marginless">
                 <div>
                     <p class="heading">
-                        Category
+                        Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        1
+                        3
                     </p>
                 </div>
             </div>
@@ -297,7 +301,7 @@ comment:
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        7
                     </p>
                 </div>
             </div>
@@ -379,7 +383,23 @@ comment:
             <span class="level-end">
                 <span class="level-item tag">2</span>
             </span>
-        </a></li>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/Programming/">
+            <span class="level-start">
+                <span class="level-item">Programming</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a><ul><li>
+        <a class="level is-marginless" href="/categories/Programming/Python/">
+            <span class="level-start">
+                <span class="level-item">Python</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li></ul></li>
             </ul>
         </div>
     </div>
@@ -391,7 +411,7 @@ comment:
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Blog/" style="font-size: 20px;">Blog</a> <a href="/tags/DISQUS/" style="font-size: 10px;">DISQUS</a> <a href="/tags/GitHub/" style="font-size: 20px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Icarus/" style="font-size: 10px;">Icarus</a>
+        <a href="/tags/Blog/" style="font-size: 20px;">Blog</a> <a href="/tags/DISQUS/" style="font-size: 10px;">DISQUS</a> <a href="/tags/GitHub/" style="font-size: 20px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Icarus/" style="font-size: 10px;">Icarus</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/collections/" style="font-size: 10px;">collections</a>
     </div>
 </div>
 
@@ -405,6 +425,25 @@ comment:
         <h3 class="menu-label">
             Recent
         </h3>
+        
+        <article class="media">
+            
+            <a href="/2019/01/12/collections-namedtuple/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/python_logo.png" alt="collections.namedtuple">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-12T02:29:00.000Z">2019-01-12</time></div>
+                    <a href="/2019/01/12/collections-namedtuple/" class="has-link-black-ter is-size-6">collections.namedtuple</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
         
         <article class="media">
             
@@ -462,7 +501,7 @@ comment:
                     <span class="level-item">January 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -539,6 +578,28 @@ comment:
                     <a class="level is-marginless" href="/tags/Icarus/">
                         <span class="level-start">
                             <span class="level-item">Icarus</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Python/">
+                        <span class="level-start">
+                            <span class="level-item">Python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/collections/">
+                        <span class="level-start">
+                            <span class="level-item">collections</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -571,6 +632,25 @@ comment:
         
         <article class="media">
             
+            <a href="/2019/01/12/collections-namedtuple/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/python_logo.png" alt="collections.namedtuple">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-12T02:29:00.000Z">2019-01-12</time></div>
+                    <a href="/2019/01/12/collections-namedtuple/" class="has-link-black-ter is-size-6">collections.namedtuple</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/Python/">Python</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/01/01/add-disqus-icarus-blog/" class="media-left">
                 <p class="image is-64x64">
                     <img class="thumbnail" src="/images/enter_disqus_0.png" alt="Icarus 테마에 Comment Plugin - discus 추가하기">
@@ -625,7 +705,7 @@ comment:
                     <span class="level-item">January 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">1</span>
+                    <span class="level-item tag">2</span>
                 </span>
             </a>
         </li>
@@ -702,6 +782,28 @@ comment:
                     <a class="level is-marginless" href="/tags/Icarus/">
                         <span class="level-start">
                             <span class="level-item">Icarus</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Python/">
+                        <span class="level-start">
+                            <span class="level-item">Python</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/collections/">
+                        <span class="level-start">
+                            <span class="level-item">collections</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
