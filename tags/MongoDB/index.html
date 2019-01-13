@@ -2,7 +2,7 @@
 <html lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Category: Blog - Ohdong&#39;s Blog</title>
+<title>Tag: MongoDB - Ohdong&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -10,7 +10,7 @@
     <meta name="description" content="Share IT technology and daily information">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ohdong&#39;s Blog">
-<meta property="og:url" content="http://kwonohdong.github.io/categories/Blog/index.html">
+<meta property="og:url" content="http://kwonohdong.github.io/tags/MongoDB/index.html">
 <meta property="og:site_name" content="Ohdong&#39;s Blog">
 <meta property="og:description" content="Share IT technology and daily information">
 <meta property="og:locale" content="en">
@@ -127,9 +127,8 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/categories">Categories</a></li>
-            
-            <li class="is-active"><a href="#" aria-current="page">Blog</a></li>
+            <li><a href="/tags">Tags</a></li>
+            <li class="is-active"><a href="#" aria-current="page">MongoDB</a></li>
         </ul>
         </nav>
     </div>
@@ -138,8 +137,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/2019/01/01/add-disqus-icarus-blog/" class="image is-7by1">
-            <img class="thumbnail" src="/images/enter_disqus_0.png" alt="Icarus 테마에 Comment Plugin - discus 추가하기">
+        <a href="/2019/01/13/inquire-nosql/" class="image is-7by1">
+            <img class="thumbnail" src="/images/nosql.png" alt="NoSQL 에 대해 알아보자.">
         </a>
     </div>
     
@@ -147,17 +146,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-01-01T14:08:17.000Z">2019-01-01</time>
+                <time class="level-item has-text-grey" datetime="2019-01-13T10:53:00.000Z">2019-01-13</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
+                <a class="has-link-grey -link" href="/categories/DB/">DB</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/DB/NoSQL/">NoSQL</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 367 words)
+                    2 minutes read (About 297 words)
                 </span>
                 
             </div>
@@ -165,210 +164,37 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/01/01/add-disqus-icarus-blog/">Icarus 테마에 Comment Plugin - discus 추가하기</a>
+                <a class="has-link-black-ter" href="/2019/01/13/inquire-nosql/">NoSQL 에 대해 알아보자.</a>
             
         </h1>
         <div class="content">
-            <hr>
-<h2 id="1-DISQUS-가입하기"><a href="#1-DISQUS-가입하기" class="headerlink" title="1. DISQUS 가입하기"></a><strong>1. DISQUS 가입하기</strong></h2><hr>
-<p>다음 링크를 <a href="https://disqus.com/" target="_blank" rel="noopener">DISQUS</a> 통하여 사이트에 가입합니다.<br><br></p>
-<hr>
-<h2 id="2-DISQUS-Website-추가하기"><a href="#2-DISQUS-Website-추가하기" class="headerlink" title="2. DISQUS Website 추가하기"></a><strong>2. DISQUS Website 추가하기</strong></h2><hr>
-<p>회원가입 완료 후, 아래 사진 절차를 따라 웹 사이트를 추가합니다.<br><br></p>
-<p><strong>2.1 I want to install Disqus on my site</strong></p>
+            <h1 id="NoSQL-데이터베이스란"><a href="#NoSQL-데이터베이스란" class="headerlink" title="NoSQL 데이터베이스란?"></a>NoSQL 데이터베이스란?</h1><p>NoSQL 데이터베이스는 특정 데이터 모델에 대해 특정 목적에 맞추어 구축되는 데이터베이스로서 현대적인 애플리케이션 구축을 위한 유연한 스키마를 갖추고 있습니다.</p>
 <ul>
-<li>다음 버튼을 클릭합니다</li>
-</ul>
-<p style="text-align:center"><br><img src="/images/enter_disqus_1.png" alt="Select install disqus" width="300" height="400"><br></p>
-
-<p><strong>2.2 Create a new site</strong></p>
+<li><p>장점</p>
 <ul>
-<li>Website Name 은 Icarus theme _config.yml 에 연결해줄 명칭으로 사용됩니다.</li>
-<li>Category 는 자신의 웹사이트 목적에 맞추어 선택합니다.</li>
-</ul>
-<p style="text-align:center"><br><img src="/images/enter_disqus_2.png" alt="Create a new site" width="400" height="500"><br></p>
-
-<p><strong>2.3 What platform is your site on?</strong></p>
-<ul>
-<li>자신의 Blog 의 플랫폼을 선택하며, Hexo 의 경우 목록에 없으므로 최하단 버튼을 선택합니다.</li>
-</ul>
-<p style="text-align:center"><br><img src="/images/enter_disqus_3.png" alt="Select platform" width="500" height="600"><br></p>
-
-<hr>
-<h2 id="3-Discus-연동-코드-적용하기"><a href="#3-Discus-연동-코드-적용하기" class="headerlink" title="3. Discus 연동 코드 적용하기"></a><strong>3. Discus 연동 코드 적용하기</strong></h2><hr>
-<p>2번의 절차를 마치고 나면 다음과 같은 창을 확인합니다.</p>
-<p style="text-align:center"><br><img src="/images/enter_disqus_4.png" alt="Set config" width="300" height="300"><br></p>
-
-<ul>
-<li>../themes/icarus/layout/disqus.ejs 파일을 오픈합니다.</li>
-<li><p>최초 파일 오픈시 다음과 같은 형태로 작성되어 있습니다.</p>
-<pre>
-(function() {
-      var d = document, s = d.createElement('script'); 
-      s.src = '//' + '<%= get_config('comment.shortname')="" %="">' + '.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-  })();
-</%=></pre>
-</li>
-<li><p>위 사진에서 1번의 소스의 <code>s.src = ‘https://“user-website-name”.disqus.com/embed.js’;</code> 를 복사한 뒤에, 위의 s.src 부분을 대체해줍니다.</p>
-</li>
-</ul>
-<hr>
-<h2 id="4-Icarus-config-yml-수정하기"><a href="#4-Icarus-config-yml-수정하기" class="headerlink" title="4. Icarus _config.yml 수정하기"></a><strong>4. Icarus _config.yml 수정하기</strong></h2><hr>
-<p>마지막으로 _config.yml 파일을 수정합니다.</p>
-<ul>
-<li>../thiemes/icarus/_config.yml 파일을 열어줍니다.</li>
-<li>다음과 같이 config 정보를 수정해주면 연동이 마무리됩니다.<pre>
-comment:
-  # Name of the comment plugin
-  type: disqus
-  shortname: Disqus Website Name
-</pre></li>
-</ul>
-
-        </div>
-        
-        
-        
-    </div>
-</div>
-
-
-
-
-
-
-
-
-    <div class="card">
-    
-    <div class="card-image">
-        <a href="/2018/12/09/create-github-blog-with-hexo/" class="image is-7by1">
-            <img class="thumbnail" src="/images/hexo_logo.png" alt="Hexo를 이용한 GitHub 블로그 만들기">
-        </a>
-    </div>
-    
-    <div class="card-content article ">
-        
-        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
-            <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-12-09T12:47:22.000Z">2018-12-09</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                </div>
-                
-                
-                <span class="level-item has-text-grey">
-                    
-                    
-                    3 minutes read (About 508 words)
-                </span>
-                
-            </div>
-        </div>
-        
-        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-            
-                <a class="has-link-black-ter" href="/2018/12/09/create-github-blog-with-hexo/">Hexo를 이용한 GitHub 블로그 만들기</a>
-            
-        </h1>
-        <div class="content">
-            <hr>
-<h2 id="1-GitHub-Repository-만들기"><a href="#1-GitHub-Repository-만들기" class="headerlink" title="1. GitHub Repository 만들기"></a><strong>1. GitHub Repository 만들기</strong></h2><hr>
-<p>먼저 블로그의 각종 설정과 포스트를 관리할 저장소가 필요합니다.<br>이를 지원해주는 <img src="/images/github_logo.png" width="10" height="10"> <a href="https://github.com" target="_blank" rel="noopener">link to GitHub!</a> 에서 새로운 저장소를 만들어보겠습니다.</p>
-<p></p><p style="text-align:center"><br><img src="/images/github_repository.png" alt="GitHub Repository" width="300" height="300"><br></p><br>위의 사진에서 보듯이 Repository name 은 다음과 같은 형식을 준수해서 만들어야 합니다.<p></p>
-<p><code><em>username.github.io</em></code></p>
-<p>마지막으로 Public 으로 지정하셔야만 GitHub 에서 호스팅이 가능합니다.</p>
-<p><br></p>
-<hr>
-<h2 id="2-Node-js-설치"><a href="#2-Node-js-설치" class="headerlink" title="2. Node.js 설치"></a><strong>2. Node.js 설치</strong></h2><hr>
-<ul>
-<li><p>Windows 사용자</p>
-<ul>
-<li><a href="https://nodejs.org/ko/" target="_blank" rel="noopener"><em>인스톨러</em></a> 를 이용한 설치</li>
+<li>개발의 용이성</li>
+<li>기능성 및 확장성</li>
 </ul>
 </li>
-<li><p>그 외 사용자</p>
+<li><p>다양한 데이터 모델</p>
 <ul>
-<li><a href="https://nodejs.org/ko/download/package-manager/" target="_blank" rel="noopener"><em>패키지 관리자</em></a> 를 이용한 설치</li>
+<li>문서</li>
+<li>그래프</li>
+<li>Key-Value</li>
+<li>In-Memory</li>
+<li>검색</li>
 </ul>
 </li>
 </ul>
-<p><br></p>
-<hr>
-<h2 id="3-Git-설치"><a href="#3-Git-설치" class="headerlink" title="3. Git 설치"></a><strong>3. Git 설치</strong></h2><hr>
-<p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a> 에서 다운로드 받아 PC 에 설치합니다.</p>
-<h5 id="Python-과-같은-프로그램을-설치할-시-함께-설치되어-있을-수-있음"><a href="#Python-과-같은-프로그램을-설치할-시-함께-설치되어-있을-수-있음" class="headerlink" title="(Python 과 같은 프로그램을 설치할 시 함께 설치되어 있을 수 있음)"></a>(<em>Python 과 같은 프로그램을 설치할 시 함께 설치되어 있을 수 있음</em>)</h5><p><br></p>
-<hr>
-<h2 id="4-Hexo-설치"><a href="#4-Hexo-설치" class="headerlink" title="4. Hexo 설치"></a><strong>4. Hexo 설치</strong></h2><hr>
-<p>다음 명령어를 cmd 명령창이나, shell 을 이용하여 설치하세요.</p>
-<pre>$ npm install -g hexo-cli</pre>
-
-<p>기타 Hexo 에 관련된 사항은 <img src="/images/hexo_logo.png" width="10" height="10"> <a href="https://hexo.io/ko/docs/" target="_blank" rel="noopener">link to Hexo!</a> 참조하세요.</p>
-<p><br></p>
-<hr>
-<h2 id="5-Hexo-시작하기"><a href="#5-Hexo-시작하기" class="headerlink" title="5. Hexo 시작하기"></a><strong>5. Hexo 시작하기</strong></h2><hr>
-<p>블로그 파일을 저장할 폴더를 하나 만듭니다.<br>만약 폴더를 지정하지 않을 시에 명령어를 보낸 디렉토리를 기준으로 준비됩니다.</p>
-<pre>
-$ hexo init [folder]
-$ cd folder
-$ npm install
-</pre>
-
+<p>수십 년간, 애플리케이션 개발을 위해 지배적으로 사용된 데이터 모델은 관계형 데이터 모델로서 Oracle, DB2, SQL Server, MySQL, PostgreSQL 과 같은 관계형 데이터베이스에 의해 사용되었습니다.<br>2000년대 중반에서 말에 이르러서야 다른 데이터 모델들이 채택되고 사용되며, 이러한 새로운 데이터베이스와 데이터 모델들을 차별화하고 분류하기 위해 “NoSQL” 이란 용어가 만들어졌습니다. 흔히 “NoSQL” 이란 용어는 “비관계형”과 같은 의미로 사용됩니다.</p>
 <ul>
-<li><p>Site</p>
-<ul>
-<li>title: 블로그 제목</li>
-<li>subtitle: 블로그 서브 제목</li>
-<li>description: 블로그에 대한 부연설명</li>
+<li>RDBMS 와의 차이점<ul>
+<li>Schemaless</li>
+<li>Join 불가 (reference 등으로 구현)</li>
+<li>No Transaction</li>
+<li>수평확장 용이</li>
 </ul>
 </li>
-<li><p>URL</p>
-<ul>
-<li>url: <a href="http://username.github.io/" target="_blank" rel="noopener">http://username.github.io/</a></li>
-</ul>
-</li>
-<li><p>Deployment</p>
-<ul>
-<li>type: git</li>
-<li>repo: <a href="http://github.com/username/username.github.io.git/" target="_blank" rel="noopener">http://github.com/username/username.github.io.git/</a></li>
-</ul>
-</li>
-</ul>
-<p>위의 내용을 참고하여 본인의 블로그를 수정합니다.</p>
-<p><br></p>
-<hr>
-<h2 id="5-1-Hexo-신규-글-포스팅"><a href="#5-1-Hexo-신규-글-포스팅" class="headerlink" title="5.1 Hexo 신규 글 포스팅"></a><strong>5.1 Hexo 신규 글 포스팅</strong></h2><hr>
-<p>다음 명령어를 통해 신규 글을 포스팅 합니다.</p>
-<pre>
-$ hexo new (title)
-</pre>
-
-<p><br></p>
-<hr>
-<h2 id="5-2-Hexo-배포하기"><a href="#5-2-Hexo-배포하기" class="headerlink" title="5.2 Hexo 배포하기"></a><strong>5.2 Hexo 배포하기</strong></h2><hr>
-<p>다음 명령어를 통해 본인의 블로그를 손쉽게 배포할 수 있습니다.</p>
-<pre>
-$ hexo generate
-$ hexo deploy -g
-</pre>
-또는
-<pre>
-$ hexo generate -deploy
-</pre>
-
-<p><br></p>
-<hr>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a><strong>Reference</strong></h2><hr>
-<ul>
-<li><a href="https://hexo.io/ko/docs" target="_blank" rel="noopener">https://hexo.io/ko/docs</a></li>
-<li><a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="noopener">https://guides.github.com/features/mastering-markdown/</a></li>
-<li><a href="https://gist.github.com/ihoneymon/652be052a0727ad59601" target="_blank" rel="noopener">https://gist.github.com/ihoneymon/652be052a0727ad59601</a></li>
-<li><a href="https://m.blog.naver.com/future_creator/220722153999" target="_blank" rel="noopener">https://m.blog.naver.com/future_creator/220722153999</a></li>
-<li><a href="https://developers.ascentnet.co.jp/2017/11/16/introduce-hexo/" target="_blank" rel="noopener">https://developers.ascentnet.co.jp/2017/11/16/introduce-hexo/</a></li>
-<li><a href="https://www.w3schools.com/tags" target="_blank" rel="noopener">https://www.w3schools.com/tags</a></li>
 </ul>
 
         </div>
