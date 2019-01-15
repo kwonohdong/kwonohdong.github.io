@@ -156,7 +156,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 367 words)
+                    2 minutes read (About 368 words)
                 </span>
                 
             </div>
@@ -173,61 +173,17 @@
 <p>다음 링크를 <a href="https://disqus.com/" target="_blank" rel="noopener">DISQUS</a> 통하여 사이트에 가입합니다.<br><br></p>
 <hr>
 <h2 id="2-DISQUS-Website-추가하기"><a href="#2-DISQUS-Website-추가하기" class="headerlink" title="2. DISQUS Website 추가하기"></a><strong>2. DISQUS Website 추가하기</strong></h2><hr>
-<p>회원가입 완료 후, 아래 사진 절차를 따라 웹 사이트를 추가합니다.<br><br></p>
-<p><strong>2.1 I want to install Disqus on my site</strong></p>
-<ul>
-<li>다음 버튼을 클릭합니다</li>
-</ul>
-<p style="text-align:center"><br><img src="/images/enter_disqus_1.png" alt="Select install disqus" width="300" height="400"><br></p>
-
-<p><strong>2.2 Create a new site</strong></p>
-<ul>
-<li>Website Name 은 Icarus theme _config.yml 에 연결해줄 명칭으로 사용됩니다.</li>
-<li>Category 는 자신의 웹사이트 목적에 맞추어 선택합니다.</li>
-</ul>
-<p style="text-align:center"><br><img src="/images/enter_disqus_2.png" alt="Create a new site" width="400" height="500"><br></p>
-
-<p><strong>2.3 What platform is your site on?</strong></p>
-<ul>
-<li>자신의 Blog 의 플랫폼을 선택하며, Hexo 의 경우 목록에 없으므로 최하단 버튼을 선택합니다.</li>
-</ul>
-<p style="text-align:center"><br><img src="/images/enter_disqus_3.png" alt="Select platform" width="500" height="600"><br></p>
-
-<hr>
-<h2 id="3-Discus-연동-코드-적용하기"><a href="#3-Discus-연동-코드-적용하기" class="headerlink" title="3. Discus 연동 코드 적용하기"></a><strong>3. Discus 연동 코드 적용하기</strong></h2><hr>
-<p>2번의 절차를 마치고 나면 다음과 같은 창을 확인합니다.</p>
-<p style="text-align:center"><br><img src="/images/enter_disqus_4.png" alt="Set config" width="300" height="300"><br></p>
-
-<ul>
-<li>../themes/icarus/layout/disqus.ejs 파일을 오픈합니다.</li>
-<li><p>최초 파일 오픈시 다음과 같은 형태로 작성되어 있습니다.</p>
-<pre>
-(function() {
-      var d = document, s = d.createElement('script'); 
-      s.src = '//' + '<%= get_config('comment.shortname')="" %="">' + '.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-  })();
-</%=></pre>
-</li>
-<li><p>위 사진에서 1번의 소스의 <code>s.src = ‘https://“user-website-name”.disqus.com/embed.js’;</code> 를 복사한 뒤에, 위의 s.src 부분을 대체해줍니다.</p>
-</li>
-</ul>
-<hr>
-<h2 id="4-Icarus-config-yml-수정하기"><a href="#4-Icarus-config-yml-수정하기" class="headerlink" title="4. Icarus _config.yml 수정하기"></a><strong>4. Icarus _config.yml 수정하기</strong></h2><hr>
-<p>마지막으로 _config.yml 파일을 수정합니다.</p>
-<ul>
-<li>../thiemes/icarus/_config.yml 파일을 열어줍니다.</li>
-<li>다음과 같이 config 정보를 수정해주면 연동이 마무리됩니다.<pre>
-comment:
-  # Name of the comment plugin
-  type: disqus
-  shortname: Disqus Website Name
-</pre></li>
-</ul>
-
+<p>회원가입 완료 후, 아래 사진 절차를 따라 웹 사이트를 추가합니다.<br></p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/01/01/add-disqus-icarus-blog/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>

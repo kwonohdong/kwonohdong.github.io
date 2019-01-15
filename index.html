@@ -146,7 +146,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 457 words)
+                    3 minutes read (About 458 words)
                 </span>
                 
             </div>
@@ -160,36 +160,16 @@
         <div class="content">
             <h2 id="1-OrderedDict-란"><a href="#1-OrderedDict-란" class="headerlink" title="1. OrderedDict 란"></a>1. OrderedDict 란</h2><p>명칭 그대로 삽입 순서가 보장되는 dictionary 형태의 컬렉션이다.</p>
 <figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">od = OrderedDict.fromkeys(<span class="hljs-string">'abcde'</span>)</span><br><span class="line">print(od)</span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>OrderedDict([(<span class="hljs-string">'a'</span>, <span class="hljs-keyword">None</span>), (<span class="hljs-string">'b'</span>, <span class="hljs-keyword">None</span>), (<span class="hljs-string">'c'</span>, <span class="hljs-keyword">None</span>), (<span class="hljs-string">'d'</span>, <span class="hljs-keyword">None</span>), (<span class="hljs-string">'e'</span>, <span class="hljs-keyword">None</span>)])</span><br><span class="line"></span><br><span class="line">od.move_to_end(<span class="hljs-string">'c'</span>)</span><br><span class="line">print(od.keys())</span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>odict_keys([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'c'</span>])</span><br><span class="line"></span><br><span class="line">od.move_to_end(<span class="hljs-string">'c'</span>, last=<span class="hljs-keyword">False</span>)</span><br><span class="line">print(od.keys())</span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>odict_keys([<span class="hljs-string">'c'</span>, <span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span>])</span><br><span class="line"></span><br><span class="line">d = &#123;<span class="hljs-string">'banana'</span>: <span class="hljs-number">3</span>, <span class="hljs-string">'apple'</span>: <span class="hljs-number">4</span>, <span class="hljs-string">'pear'</span>: <span class="hljs-number">1</span>, <span class="hljs-string">'orange'</span>: <span class="hljs-number">2</span>&#125;</span><br><span class="line"></span><br><span class="line">print(OrderedDict(sorted(d.items(), key=<span class="hljs-keyword">lambda</span> t: t[<span class="hljs-number">0</span>]))) <span class="hljs-comment"># Key 를 이용한 정렬</span></span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>OrderedDict([(<span class="hljs-string">'apple'</span>, <span class="hljs-number">4</span>), (<span class="hljs-string">'banana'</span>, <span class="hljs-number">3</span>), (<span class="hljs-string">'orange'</span>, <span class="hljs-number">2</span>), (<span class="hljs-string">'pear'</span>, <span class="hljs-number">1</span>)])</span><br><span class="line"></span><br><span class="line">print(OrderedDict(sorted(d.items(), key=<span class="hljs-keyword">lambda</span> t: t[<span class="hljs-number">1</span>]))) <span class="hljs-comment"># Value 를 이용한 정렬</span></span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>OrderedDict([(<span class="hljs-string">'pear'</span>, <span class="hljs-number">1</span>), (<span class="hljs-string">'orange'</span>, <span class="hljs-number">2</span>), (<span class="hljs-string">'banana'</span>, <span class="hljs-number">3</span>), (<span class="hljs-string">'apple'</span>, <span class="hljs-number">4</span>)])</span><br><span class="line"></span><br><span class="line">print(OrderedDict(sorted(d.items(), key=<span class="hljs-keyword">lambda</span> t: len(t[<span class="hljs-number">0</span>])))) <span class="hljs-comment"># Key 값의 길이를 이용한 정렬</span></span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>OrderedDict([(<span class="hljs-string">'pear'</span>, <span class="hljs-number">1</span>), (<span class="hljs-string">'apple'</span>, <span class="hljs-number">4</span>), (<span class="hljs-string">'banana'</span>, <span class="hljs-number">3</span>), (<span class="hljs-string">'orange'</span>, <span class="hljs-number">2</span>)])</span><br></pre></td></tr></table></figure>
-<h2 id="2-dict-vs-OrderedDict"><a href="#2-dict-vs-OrderedDict" class="headerlink" title="2. dict vs OrderedDict"></a>2. dict vs OrderedDict</h2><p>파이썬 3.7 이전 환경에서 아래 소스를 실행할 경우, OrderedDict 는 삽입 순서가 보장되며, Dictionary의 경우는 순서가 Set 연산자와 마찬가지로 보장되지 않는 것을 확인할 수 있다.</p>
-<p><em>(삽입순서에 대한 정보가 내부적으로 관리되다보니 OrderedDict 가 dictionary 에 비해 메모리를 두배이상 사용.)</em></p>
-<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">od = OrderedDict()</span><br><span class="line">od[<span class="hljs-string">'c'</span>] = <span class="hljs-number">1</span></span><br><span class="line">od[<span class="hljs-string">'b'</span>] = <span class="hljs-number">2</span></span><br><span class="line">od[<span class="hljs-string">'a'</span>] = <span class="hljs-number">3</span></span><br><span class="line">print(od.items())</span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>[(<span class="hljs-string">'c'</span>, <span class="hljs-number">1</span>), (<span class="hljs-string">'b'</span>, <span class="hljs-number">2</span>), (<span class="hljs-string">'a'</span>, <span class="hljs-number">3</span>)]</span><br><span class="line"></span><br><span class="line">d = &#123;&#125;</span><br><span class="line">d[<span class="hljs-string">'c'</span>] = <span class="hljs-number">1</span></span><br><span class="line">d[<span class="hljs-string">'b'</span>] = <span class="hljs-number">2</span></span><br><span class="line">d[<span class="hljs-string">'a'</span>] = <span class="hljs-number">3</span></span><br><span class="line">print(d.items())</span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>[(<span class="hljs-string">'a'</span>, <span class="hljs-number">3</span>), (<span class="hljs-string">'c'</span>, <span class="hljs-number">1</span>), (<span class="hljs-string">'b'</span>, <span class="hljs-number">2</span>)]</span><br></pre></td></tr></table></figure>
-<p>※ Python 3.7 부터는 dictionary 의 경우에도 삽입 순서가 보장됨.<br><a href="https://www.flowdas.com/2018/01/23/dict-is-ordered.html" target="_blank" rel="noopener">(참조 URL)</a></p>
-<h2 id="3-OrderedDict-활용"><a href="#3-OrderedDict-활용" class="headerlink" title="3. OrderedDict 활용"></a>3. OrderedDict 활용</h2><pre>
-사용자가 n 번 만큼 값을 입력하고 출력된 결과가 다음과 같을 때,
-삽입순서가 보장되지 않는 파이썬 환경에서 OrderedDict 를 활용해 작성해보자.
-
-- Input
-9
-BANANA FRIES 12
-POTATO CHIPS 30
-APPLE JUICE 10
-CANDY 5
-APPLE JUICE 10
-CANDY 5
-CANDY 5
-CANDY 5
-POTATO CHIPS 30
-
-- Output
-BANANA FRIES 12
-POTATO CHIPS 60
-APPLE JUICE 20
-CANDY 20
-</pre>
-
-<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment"># Problem Result Code</span></span><br><span class="line">n = int(input())</span><br><span class="line"></span><br><span class="line">ordered_dictionary = OrderedDict()</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">for</span> _ <span class="hljs-keyword">in</span> range(n):</span><br><span class="line">    item_name, space, net_price = input().rpartition(<span class="hljs-string">' '</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-comment"># dict.get('key', default) → key 값이 없으면 default 반환</span></span><br><span class="line">    ordered_dictionary[item_name] = ordered_dictionary.get(item_name, <span class="hljs-number">0</span>) + int(net_price)</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">for</span> item_name, net_price <span class="hljs-keyword">in</span> ordered_dictionary.items():</span><br><span class="line">    print(item_name, net_price)</span><br></pre></td></tr></table></figure>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/01/15/collections-ordereddict/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -224,7 +204,7 @@ CANDY 20
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 297 words)
+                    2 minutes read (About 298 words)
                 </span>
                 
             </div>
@@ -250,23 +230,17 @@ CANDY 20
 <li>그래프</li>
 <li>Key-Value</li>
 <li>In-Memory</li>
-<li>검색</li>
-</ul>
-</li>
-</ul>
-<p>수십 년간, 애플리케이션 개발을 위해 지배적으로 사용된 데이터 모델은 관계형 데이터 모델로서 Oracle, DB2, SQL Server, MySQL, PostgreSQL 과 같은 관계형 데이터베이스에 의해 사용되었습니다.<br>2000년대 중반에서 말에 이르러서야 다른 데이터 모델들이 채택되고 사용되며, 이러한 새로운 데이터베이스와 데이터 모델들을 차별화하고 분류하기 위해 “NoSQL” 이란 용어가 만들어졌습니다. 흔히 “NoSQL” 이란 용어는 “비관계형”과 같은 의미로 사용됩니다.</p>
-<ul>
-<li>RDBMS 와의 차이점<ul>
-<li>Schemaless</li>
-<li>Join 불가 (reference 등으로 구현)</li>
-<li>No Transaction</li>
-<li>수평확장 용이</li>
-</ul>
-</li>
-</ul>
-
+<li>검색</li></ul></li></ul>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/01/13/inquire-nosql/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -301,7 +275,7 @@ CANDY 20
                 <span class="level-item has-text-grey">
                     
                     
-                    5 minutes read (About 706 words)
+                    5 minutes read (About 707 words)
                 </span>
                 
             </div>
@@ -314,30 +288,17 @@ CANDY 20
         </h1>
         <div class="content">
             <h2 id="1-namedtuple이란"><a href="#1-namedtuple이란" class="headerlink" title="1. namedtuple이란"></a>1. namedtuple이란</h2><p>명칭 그대로 index(idx)로만 값(value)에 접근 가능한 기본 튜플(basic Tuple)과는 다르게 키(key)값으로 접근이 가능하도록 제공한다. 키(namedtuple에서는 field_names)를 가지고 값에 접근이 가능한 점이 딕셔너리(dict)타입과 비슷하다 할 수 있다. namedtuple()에 대한 자세한 내용은 <a href="https://docs.python.org/3.3/library/collections.html#collections.namedtuple" target="_blank" rel="noopener">docs.python.org</a> 에서 확인할 수 있다.</p>
-<p>namedtuple()은 collections.namedtuple(typename, field_names, verbose=False, rename=False)을 입력값으로 받으며, field_names 를 통해 namedtuple()의 키 즉, 필드명(fieldname)을 정의할 수 있다. 필드명을 정의할 때에는 필드사이에 <strong><em> 빈칸(whitespace)이나 ‘,’ 로 구분 </em></strong> 해준다. 예를들어 필드명 x 와 y 를 지정할 경우 ‘x y’ 나 ‘x, y’와 같이 입력해야한다. 다른방법으로는 [‘x’, ‘y’]와 같이 리스트(list)형식으로 필드명을 지정해줄 수 있다.</p>
-<h3 id="1-1-tuple-vs-namedtuple"><a href="#1-1-tuple-vs-namedtuple" class="headerlink" title="1.1. tuple vs namedtuple"></a>1.1. tuple vs namedtuple</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> namedtuple</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Point = namedtuple(<span class="hljs-string">'Point'</span>, <span class="hljs-string">'x, y'</span>)</span><br><span class="line"></span><br><span class="line">pt1 = Point(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>)</span><br><span class="line">pt2 = Point(<span class="hljs-number">20</span>, <span class="hljs-number">40</span>)</span><br><span class="line"></span><br><span class="line">tp1 = (<span class="hljs-number">10</span>, <span class="hljs-number">20</span>)</span><br><span class="line">tp2 = (<span class="hljs-number">20</span>, <span class="hljs-number">40</span>)</span><br><span class="line"></span><br><span class="line">print(pt1, pt2)</span><br><span class="line">print(pt1.x, pt1.y)</span><br><span class="line"></span><br><span class="line">print(tp1, tp2)</span><br><span class="line">print(tp1[<span class="hljs-number">0</span>], tp1[<span class="hljs-number">1</span>])</span><br></pre></td></tr></table></figure>
-<p>위의 소스를 실행시켜 보면, 접근 방식의 차이가 분명하다.</p>
-<p style="text-align:center"><br><img src="/images/namedtuple_vs_tuple.png" alt="namedtuple vs tuple" width="300" height="400"><br></p>
-
-<ul>
-<li>차이점<ul>
-<li>namedtuple 의 경우엔 딕셔너리와 같은 형태로 내부 값에 접근</li>
-<li>tuple 의 경우엔 인덱스 요소 접근 방식으로 내부 값에 접근</li>
-</ul>
-</li>
-</ul>
-<h2 id="2-namedtuple-함수"><a href="#2-namedtuple-함수" class="headerlink" title="2. namedtuple 함수"></a>2. namedtuple 함수</h2><h3 id="2-1-make"><a href="#2-1-make" class="headerlink" title="2.1. _make()"></a>2.1. _make()</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> namedtuple</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Point = namedtuple(<span class="hljs-string">'Point'</span>, <span class="hljs-string">'x, y'</span>)</span><br><span class="line"></span><br><span class="line">location = [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>]</span><br><span class="line">pt3 = Point._make(location)</span><br><span class="line">print(pt3)</span><br></pre></td></tr></table></figure>
-<p>정의된 namedtuple 객체를 이용하여, _make() 함수를 활용한 객체 생성도 가능하다.</p>
-<h3 id="2-2-replace"><a href="#2-2-replace" class="headerlink" title="2.2. _replace()"></a>2.2. _replace()</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> namedtuple</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Point = namedtuple(<span class="hljs-string">'Point'</span>, <span class="hljs-string">'x, y'</span>)</span><br><span class="line"></span><br><span class="line">location = [<span class="hljs-number">1</span>, <span class="hljs-number">5</span>]</span><br><span class="line">pt3 = Point._make(location)</span><br><span class="line">print(pt3._replace(x=<span class="hljs-number">100</span>))</span><br></pre></td></tr></table></figure>
-<p>튜플은 기본적으로 내부 요소의 값의 변경이 불가능하지만, 기존에 가지고 있던 요소별 값 중 일부를 변경하여 새로운 객체로 변환이 가능하게 도와주는 함수라 볼 수 있다.</p>
-<h3 id="2-3-fields"><a href="#2-3-fields" class="headerlink" title="2.3. _fields"></a>2.3. _fields</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> namedtuple</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Point = namedtuple(<span class="hljs-string">'Point'</span>, <span class="hljs-string">'x, y'</span>)</span><br><span class="line">print(Point._fields)</span><br><span class="line"></span><br><span class="line">Color = namedtuple(<span class="hljs-string">'Color'</span>, <span class="hljs-string">'red green blue'</span>)</span><br><span class="line">Pixel = namedtuple(<span class="hljs-string">'Pixel'</span>, Point._fields + Color._fields)</span><br><span class="line">print(Pixel(<span class="hljs-number">11</span>, <span class="hljs-number">22</span>, <span class="hljs-number">128</span>, <span class="hljs-number">255</span>, <span class="hljs-number">0</span>))</span><br></pre></td></tr></table></figure>
-<p>namedtuple 로 정의된 객체의 필드를 확인할 수 있는 _fields 이다.</p>
-<h3 id="2-4-fields-defaults"><a href="#2-4-fields-defaults" class="headerlink" title="2.4. _fields_defaults"></a>2.4. _fields_defaults</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> namedtuple</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Account = namedtuple(<span class="hljs-string">'Account'</span>, [<span class="hljs-string">'type'</span>, <span class="hljs-string">'balance'</span>], defaults=[<span class="hljs-number">123456</span>,<span class="hljs-number">999</span>])</span><br><span class="line">print(Account._fields_defaults)</span><br><span class="line"></span><br><span class="line">account = Account()</span><br><span class="line">print(account)</span><br><span class="line"></span><br><span class="line">account = Account(<span class="hljs-string">'premium'</span>)</span><br><span class="line">print(account)</span><br></pre></td></tr></table></figure>
-<h3 id="2-5-rename"><a href="#2-5-rename" class="headerlink" title="2.5. rename"></a>2.5. rename</h3><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> namedtuple</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="hljs-comment"># 실행 시 에러 발생</span></span><br><span class="line">use_built_in_keyword = namedtuple(<span class="hljs-string">'Account'</span>, [<span class="hljs-string">'type'</span>, <span class="hljs-string">'balance'</span>, <span class="hljs-string">'class'</span>])</span><br><span class="line"></span><br><span class="line">use_built_in_keyword = namedtuple(<span class="hljs-string">'use_built_in_keyword'</span>, [<span class="hljs-string">'type'</span>, <span class="hljs-string">'balance'</span>, <span class="hljs-string">'class'</span>], rename=<span class="hljs-keyword">True</span>)</span><br><span class="line">print(use_built_in_keyword(<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'c'</span>))</span><br></pre></td></tr></table></figure>
-<p></p><p style="text-align:center"><br><img src="/images/namedtuple_rename.png" alt="namedtuple rename" width="300" height="400"><br></p><br>namedtuple 을 이용하여, 객체 생성시 정의된 내부 키워드 ‘class’ 와 같은 명칭을 사용할 경우 에러가 발생한다. (default: rename=False)<br>명칭을 사용할 때에는, 정의된 키워드를 피하는 것을 추천하나 굳이 사용해야하는 경우 rename=True 를 써준다면 내부적으로 해당 명칭을 변경시켜주어 충돌을 피할 수 있다.<p></p>
-
+<p>namedtuple()은 collections.namedtuple(typename, field_names, verbose=False, rename=False)을 입력값으로 받으며, field_names 를 통해 namedtuple()의 키 즉, 필드명(fieldname)을 정의할 수 있다. 필드명을 정의할 때에는 필드사이에 <strong><em> 빈칸(whitespace)이나 ‘,’ 로 구분 </em></strong> 해준다. 예를들어 필드명 x 와 y 를 지정할 경우 ‘x y’ 나 ‘x, y’와 같이 입력해야한다. 다른방법으로는 [‘x’, ‘y’]와 같이 리스트(list)형식으로 필드명을 지정해줄 수 있다.<br></p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/01/12/collections-namedtuple/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -372,7 +333,7 @@ CANDY 20
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 367 words)
+                    2 minutes read (About 368 words)
                 </span>
                 
             </div>
@@ -389,61 +350,17 @@ CANDY 20
 <p>다음 링크를 <a href="https://disqus.com/" target="_blank" rel="noopener">DISQUS</a> 통하여 사이트에 가입합니다.<br><br></p>
 <hr>
 <h2 id="2-DISQUS-Website-추가하기"><a href="#2-DISQUS-Website-추가하기" class="headerlink" title="2. DISQUS Website 추가하기"></a><strong>2. DISQUS Website 추가하기</strong></h2><hr>
-<p>회원가입 완료 후, 아래 사진 절차를 따라 웹 사이트를 추가합니다.<br><br></p>
-<p><strong>2.1 I want to install Disqus on my site</strong></p>
-<ul>
-<li>다음 버튼을 클릭합니다</li>
-</ul>
-<p style="text-align:center"><br><img src="/images/enter_disqus_1.png" alt="Select install disqus" width="300" height="400"><br></p>
-
-<p><strong>2.2 Create a new site</strong></p>
-<ul>
-<li>Website Name 은 Icarus theme _config.yml 에 연결해줄 명칭으로 사용됩니다.</li>
-<li>Category 는 자신의 웹사이트 목적에 맞추어 선택합니다.</li>
-</ul>
-<p style="text-align:center"><br><img src="/images/enter_disqus_2.png" alt="Create a new site" width="400" height="500"><br></p>
-
-<p><strong>2.3 What platform is your site on?</strong></p>
-<ul>
-<li>자신의 Blog 의 플랫폼을 선택하며, Hexo 의 경우 목록에 없으므로 최하단 버튼을 선택합니다.</li>
-</ul>
-<p style="text-align:center"><br><img src="/images/enter_disqus_3.png" alt="Select platform" width="500" height="600"><br></p>
-
-<hr>
-<h2 id="3-Discus-연동-코드-적용하기"><a href="#3-Discus-연동-코드-적용하기" class="headerlink" title="3. Discus 연동 코드 적용하기"></a><strong>3. Discus 연동 코드 적용하기</strong></h2><hr>
-<p>2번의 절차를 마치고 나면 다음과 같은 창을 확인합니다.</p>
-<p style="text-align:center"><br><img src="/images/enter_disqus_4.png" alt="Set config" width="300" height="300"><br></p>
-
-<ul>
-<li>../themes/icarus/layout/disqus.ejs 파일을 오픈합니다.</li>
-<li><p>최초 파일 오픈시 다음과 같은 형태로 작성되어 있습니다.</p>
-<pre>
-(function() {
-      var d = document, s = d.createElement('script'); 
-      s.src = '//' + '<%= get_config('comment.shortname')="" %="">' + '.disqus.com/embed.js';
-      s.setAttribute('data-timestamp', +new Date());
-      (d.head || d.body).appendChild(s);
-  })();
-</%=></pre>
-</li>
-<li><p>위 사진에서 1번의 소스의 <code>s.src = ‘https://“user-website-name”.disqus.com/embed.js’;</code> 를 복사한 뒤에, 위의 s.src 부분을 대체해줍니다.</p>
-</li>
-</ul>
-<hr>
-<h2 id="4-Icarus-config-yml-수정하기"><a href="#4-Icarus-config-yml-수정하기" class="headerlink" title="4. Icarus _config.yml 수정하기"></a><strong>4. Icarus _config.yml 수정하기</strong></h2><hr>
-<p>마지막으로 _config.yml 파일을 수정합니다.</p>
-<ul>
-<li>../thiemes/icarus/_config.yml 파일을 열어줍니다.</li>
-<li>다음과 같이 config 정보를 수정해주면 연동이 마무리됩니다.<pre>
-comment:
-  # Name of the comment plugin
-  type: disqus
-  shortname: Disqus Website Name
-</pre></li>
-</ul>
-
+<p>회원가입 완료 후, 아래 사진 절차를 따라 웹 사이트를 추가합니다.<br></p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2019/01/01/add-disqus-icarus-blog/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
@@ -478,7 +395,7 @@ comment:
                 <span class="level-item has-text-grey">
                     
                     
-                    3 minutes read (About 508 words)
+                    3 minutes read (About 509 words)
                 </span>
                 
             </div>
@@ -495,99 +412,17 @@ comment:
 <p>먼저 블로그의 각종 설정과 포스트를 관리할 저장소가 필요합니다.<br>이를 지원해주는 <img src="/images/github_logo.png" width="10" height="10"> <a href="https://github.com" target="_blank" rel="noopener">link to GitHub!</a> 에서 새로운 저장소를 만들어보겠습니다.</p>
 <p></p><p style="text-align:center"><br><img src="/images/github_repository.png" alt="GitHub Repository" width="300" height="300"><br></p><br>위의 사진에서 보듯이 Repository name 은 다음과 같은 형식을 준수해서 만들어야 합니다.<p></p>
 <p><code><em>username.github.io</em></code></p>
-<p>마지막으로 Public 으로 지정하셔야만 GitHub 에서 호스팅이 가능합니다.</p>
-<p><br></p>
-<hr>
-<h2 id="2-Node-js-설치"><a href="#2-Node-js-설치" class="headerlink" title="2. Node.js 설치"></a><strong>2. Node.js 설치</strong></h2><hr>
-<ul>
-<li><p>Windows 사용자</p>
-<ul>
-<li><a href="https://nodejs.org/ko/" target="_blank" rel="noopener"><em>인스톨러</em></a> 를 이용한 설치</li>
-</ul>
-</li>
-<li><p>그 외 사용자</p>
-<ul>
-<li><a href="https://nodejs.org/ko/download/package-manager/" target="_blank" rel="noopener"><em>패키지 관리자</em></a> 를 이용한 설치</li>
-</ul>
-</li>
-</ul>
-<p><br></p>
-<hr>
-<h2 id="3-Git-설치"><a href="#3-Git-설치" class="headerlink" title="3. Git 설치"></a><strong>3. Git 설치</strong></h2><hr>
-<p><a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a> 에서 다운로드 받아 PC 에 설치합니다.</p>
-<h5 id="Python-과-같은-프로그램을-설치할-시-함께-설치되어-있을-수-있음"><a href="#Python-과-같은-프로그램을-설치할-시-함께-설치되어-있을-수-있음" class="headerlink" title="(Python 과 같은 프로그램을 설치할 시 함께 설치되어 있을 수 있음)"></a>(<em>Python 과 같은 프로그램을 설치할 시 함께 설치되어 있을 수 있음</em>)</h5><p><br></p>
-<hr>
-<h2 id="4-Hexo-설치"><a href="#4-Hexo-설치" class="headerlink" title="4. Hexo 설치"></a><strong>4. Hexo 설치</strong></h2><hr>
-<p>다음 명령어를 cmd 명령창이나, shell 을 이용하여 설치하세요.</p>
-<pre>$ npm install -g hexo-cli</pre>
-
-<p>기타 Hexo 에 관련된 사항은 <img src="/images/hexo_logo.png" width="10" height="10"> <a href="https://hexo.io/ko/docs/" target="_blank" rel="noopener">link to Hexo!</a> 참조하세요.</p>
-<p><br></p>
-<hr>
-<h2 id="5-Hexo-시작하기"><a href="#5-Hexo-시작하기" class="headerlink" title="5. Hexo 시작하기"></a><strong>5. Hexo 시작하기</strong></h2><hr>
-<p>블로그 파일을 저장할 폴더를 하나 만듭니다.<br>만약 폴더를 지정하지 않을 시에 명령어를 보낸 디렉토리를 기준으로 준비됩니다.</p>
-<pre>
-$ hexo init [folder]
-$ cd folder
-$ npm install
-</pre>
-
-<ul>
-<li><p>Site</p>
-<ul>
-<li>title: 블로그 제목</li>
-<li>subtitle: 블로그 서브 제목</li>
-<li>description: 블로그에 대한 부연설명</li>
-</ul>
-</li>
-<li><p>URL</p>
-<ul>
-<li>url: <a href="http://username.github.io/" target="_blank" rel="noopener">http://username.github.io/</a></li>
-</ul>
-</li>
-<li><p>Deployment</p>
-<ul>
-<li>type: git</li>
-<li>repo: <a href="http://github.com/username/username.github.io.git/" target="_blank" rel="noopener">http://github.com/username/username.github.io.git/</a></li>
-</ul>
-</li>
-</ul>
-<p>위의 내용을 참고하여 본인의 블로그를 수정합니다.</p>
-<p><br></p>
-<hr>
-<h2 id="5-1-Hexo-신규-글-포스팅"><a href="#5-1-Hexo-신규-글-포스팅" class="headerlink" title="5.1 Hexo 신규 글 포스팅"></a><strong>5.1 Hexo 신규 글 포스팅</strong></h2><hr>
-<p>다음 명령어를 통해 신규 글을 포스팅 합니다.</p>
-<pre>
-$ hexo new (title)
-</pre>
-
-<p><br></p>
-<hr>
-<h2 id="5-2-Hexo-배포하기"><a href="#5-2-Hexo-배포하기" class="headerlink" title="5.2 Hexo 배포하기"></a><strong>5.2 Hexo 배포하기</strong></h2><hr>
-<p>다음 명령어를 통해 본인의 블로그를 손쉽게 배포할 수 있습니다.</p>
-<pre>
-$ hexo generate
-$ hexo deploy -g
-</pre>
-또는
-<pre>
-$ hexo generate -deploy
-</pre>
-
-<p><br></p>
-<hr>
-<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a><strong>Reference</strong></h2><hr>
-<ul>
-<li><a href="https://hexo.io/ko/docs" target="_blank" rel="noopener">https://hexo.io/ko/docs</a></li>
-<li><a href="https://guides.github.com/features/mastering-markdown/" target="_blank" rel="noopener">https://guides.github.com/features/mastering-markdown/</a></li>
-<li><a href="https://gist.github.com/ihoneymon/652be052a0727ad59601" target="_blank" rel="noopener">https://gist.github.com/ihoneymon/652be052a0727ad59601</a></li>
-<li><a href="https://m.blog.naver.com/future_creator/220722153999" target="_blank" rel="noopener">https://m.blog.naver.com/future_creator/220722153999</a></li>
-<li><a href="https://developers.ascentnet.co.jp/2017/11/16/introduce-hexo/" target="_blank" rel="noopener">https://developers.ascentnet.co.jp/2017/11/16/introduce-hexo/</a></li>
-<li><a href="https://www.w3schools.com/tags" target="_blank" rel="noopener">https://www.w3schools.com/tags</a></li>
-</ul>
-
+<p>마지막으로 Public 으로 지정하셔야만 GitHub 에서 호스팅이 가능합니다.<br></p>
         </div>
         
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/2018/12/09/create-github-blog-with-hexo/#more">Read More</a>
+                </div>
+            </div>
+        </div>
         
         
     </div>
