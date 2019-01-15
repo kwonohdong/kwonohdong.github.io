@@ -138,7 +138,7 @@
     
     <div class="card-image">
         <a href="/2019/01/15/collections-ordereddict/" class="image is-7by1">
-            <img class="thumbnail" src="/images/python_logo.png" alt="collections.ordereddict">
+            <img class="thumbnail" src="/images/python_logo.png" alt="collections.OrderedDict">
         </a>
     </div>
     
@@ -164,12 +164,11 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/01/15/collections-ordereddict/">collections.ordereddict</a>
+                <a class="has-link-black-ter" href="/2019/01/15/collections-ordereddict/">collections.OrderedDict</a>
             
         </h1>
         <div class="content">
-            <h2 id="1-OrderedDict-란"><a href="#1-OrderedDict-란" class="headerlink" title="1. OrderedDict 란"></a>1. OrderedDict 란</h2><p>명칭 그대로 삽입 순서가 보장되는 dictionary 형태의 컬렉션이다.</p>
-<figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">from</span> collections <span class="hljs-keyword">import</span> OrderedDict</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">od = OrderedDict.fromkeys(<span class="hljs-string">'abcde'</span>)</span><br><span class="line">print(od)</span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>OrderedDict([(<span class="hljs-string">'a'</span>, <span class="hljs-keyword">None</span>), (<span class="hljs-string">'b'</span>, <span class="hljs-keyword">None</span>), (<span class="hljs-string">'c'</span>, <span class="hljs-keyword">None</span>), (<span class="hljs-string">'d'</span>, <span class="hljs-keyword">None</span>), (<span class="hljs-string">'e'</span>, <span class="hljs-keyword">None</span>)])</span><br><span class="line"></span><br><span class="line">od.move_to_end(<span class="hljs-string">'c'</span>)</span><br><span class="line">print(od.keys())</span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>odict_keys([<span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span>, <span class="hljs-string">'c'</span>])</span><br><span class="line"></span><br><span class="line">od.move_to_end(<span class="hljs-string">'c'</span>, last=<span class="hljs-keyword">False</span>)</span><br><span class="line">print(od.keys())</span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>odict_keys([<span class="hljs-string">'c'</span>, <span class="hljs-string">'a'</span>, <span class="hljs-string">'b'</span>, <span class="hljs-string">'d'</span>, <span class="hljs-string">'e'</span>])</span><br><span class="line"></span><br><span class="line">d = &#123;<span class="hljs-string">'banana'</span>: <span class="hljs-number">3</span>, <span class="hljs-string">'apple'</span>: <span class="hljs-number">4</span>, <span class="hljs-string">'pear'</span>: <span class="hljs-number">1</span>, <span class="hljs-string">'orange'</span>: <span class="hljs-number">2</span>&#125;</span><br><span class="line"></span><br><span class="line">print(OrderedDict(sorted(d.items(), key=<span class="hljs-keyword">lambda</span> t: t[<span class="hljs-number">0</span>]))) <span class="hljs-comment"># Key 를 이용한 정렬</span></span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>OrderedDict([(<span class="hljs-string">'apple'</span>, <span class="hljs-number">4</span>), (<span class="hljs-string">'banana'</span>, <span class="hljs-number">3</span>), (<span class="hljs-string">'orange'</span>, <span class="hljs-number">2</span>), (<span class="hljs-string">'pear'</span>, <span class="hljs-number">1</span>)])</span><br><span class="line"></span><br><span class="line">print(OrderedDict(sorted(d.items(), key=<span class="hljs-keyword">lambda</span> t: t[<span class="hljs-number">1</span>]))) <span class="hljs-comment"># Value 를 이용한 정렬</span></span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>OrderedDict([(<span class="hljs-string">'pear'</span>, <span class="hljs-number">1</span>), (<span class="hljs-string">'orange'</span>, <span class="hljs-number">2</span>), (<span class="hljs-string">'banana'</span>, <span class="hljs-number">3</span>), (<span class="hljs-string">'apple'</span>, <span class="hljs-number">4</span>)])</span><br><span class="line"></span><br><span class="line">print(OrderedDict(sorted(d.items(), key=<span class="hljs-keyword">lambda</span> t: len(t[<span class="hljs-number">0</span>])))) <span class="hljs-comment"># Key 값의 길이를 이용한 정렬</span></span><br><span class="line"><span class="hljs-meta">&gt;&gt;&gt; </span>OrderedDict([(<span class="hljs-string">'pear'</span>, <span class="hljs-number">1</span>), (<span class="hljs-string">'apple'</span>, <span class="hljs-number">4</span>), (<span class="hljs-string">'banana'</span>, <span class="hljs-number">3</span>), (<span class="hljs-string">'orange'</span>, <span class="hljs-number">2</span>)])</span><br></pre></td></tr></table></figure>
+            <h2 id="1-OrderedDict-란"><a href="#1-OrderedDict-란" class="headerlink" title="1. OrderedDict 란"></a>1. OrderedDict 란</h2><p>명칭 그대로 삽입 순서가 보장되는 dictionary 형태의 컬렉션이다.<br></p>
         </div>
         
         
@@ -291,7 +290,7 @@
                         Posts
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        6
                     </p>
                 </div>
             </div>
@@ -301,7 +300,7 @@
                         Categories
                     </p>
                     <p class="title has-text-weight-normal">
-                        5
+                        6
                     </p>
                 </div>
             </div>
@@ -311,7 +310,7 @@
                         Tags
                     </p>
                     <p class="title has-text-weight-normal">
-                        8
+                        10
                     </p>
                 </div>
             </div>
@@ -415,9 +414,17 @@
                 <span class="level-item">Programming</span>
             </span>
             <span class="level-end">
-                <span class="level-item tag">2</span>
+                <span class="level-item tag">3</span>
             </span>
         </a><ul><li>
+        <a class="level is-marginless" href="/categories/Programming/C/">
+            <span class="level-start">
+                <span class="level-item">C#</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
         <a class="level is-marginless" href="/categories/Programming/Python/">
             <span class="level-start">
                 <span class="level-item">Python</span>
@@ -437,7 +444,7 @@
         <h3 class="menu-label">
             Tag Cloud
         </h3>
-        <a href="/tags/Blog/" style="font-size: 20px;">Blog</a> <a href="/tags/DISQUS/" style="font-size: 10px;">DISQUS</a> <a href="/tags/GitHub/" style="font-size: 20px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Icarus/" style="font-size: 10px;">Icarus</a> <a href="/tags/NoSql/" style="font-size: 10px;">NoSql</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/collections/" style="font-size: 20px;">collections</a>
+        <a href="/tags/Blog/" style="font-size: 20px;">Blog</a> <a href="/tags/C/" style="font-size: 10px;">C#</a> <a href="/tags/DISQUS/" style="font-size: 10px;">DISQUS</a> <a href="/tags/Data-Type/" style="font-size: 10px;">Data Type</a> <a href="/tags/GitHub/" style="font-size: 20px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Icarus/" style="font-size: 10px;">Icarus</a> <a href="/tags/NoSql/" style="font-size: 10px;">NoSql</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/collections/" style="font-size: 20px;">collections</a>
     </div>
 </div>
 
@@ -454,16 +461,35 @@
         
         <article class="media">
             
+            <a href="/2019/01/15/c-sharp-datatype/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/c-sharp_logo.png" alt="C# 데이터 자료형">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-15T12:50:57.000Z">2019-01-15</time></div>
+                    <a href="/2019/01/15/c-sharp-datatype/" class="has-link-black-ter is-size-6">C# 데이터 자료형</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/C/">C#</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/01/15/collections-ordereddict/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/python_logo.png" alt="collections.ordereddict">
+                    <img class="thumbnail" src="/images/python_logo.png" alt="collections.OrderedDict">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-15T10:51:01.000Z">2019-01-15</time></div>
-                    <a href="/2019/01/15/collections-ordereddict/" class="has-link-black-ter is-size-6">collections.ordereddict</a>
+                    <a href="/2019/01/15/collections-ordereddict/" class="has-link-black-ter is-size-6">collections.OrderedDict</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/Python/">Python</a>
                     </p>
@@ -528,25 +554,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2018/12/09/create-github-blog-with-hexo/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/hexo_logo.png" alt="Hexo를 이용한 GitHub 블로그 만들기">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-09T12:47:22.000Z">2018-12-09</time></div>
-                    <a href="/2018/12/09/create-github-blog-with-hexo/" class="has-link-black-ter is-size-6">Hexo를 이용한 GitHub 블로그 만들기</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -565,7 +572,7 @@
                     <span class="level-item">January 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -606,9 +613,31 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/C/">
+                        <span class="level-start">
+                            <span class="level-item">C#</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/DISQUS/">
                         <span class="level-start">
                             <span class="level-item">DISQUS</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Data-Type/">
+                        <span class="level-start">
+                            <span class="level-item">Data Type</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>
@@ -707,16 +736,35 @@
         
         <article class="media">
             
+            <a href="/2019/01/15/c-sharp-datatype/" class="media-left">
+                <p class="image is-64x64">
+                    <img class="thumbnail" src="/images/c-sharp_logo.png" alt="C# 데이터 자료형">
+                </p>
+            </a>
+            
+            <div class="media-content">
+                <div class="content">
+                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-15T12:50:57.000Z">2019-01-15</time></div>
+                    <a href="/2019/01/15/c-sharp-datatype/" class="has-link-black-ter is-size-6">C# 데이터 자료형</a>
+                    <p class="is-size-7 is-uppercase">
+                        <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/C/">C#</a>
+                    </p>
+                </div>
+            </div>
+        </article>
+        
+        <article class="media">
+            
             <a href="/2019/01/15/collections-ordereddict/" class="media-left">
                 <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/python_logo.png" alt="collections.ordereddict">
+                    <img class="thumbnail" src="/images/python_logo.png" alt="collections.OrderedDict">
                 </p>
             </a>
             
             <div class="media-content">
                 <div class="content">
                     <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2019-01-15T10:51:01.000Z">2019-01-15</time></div>
-                    <a href="/2019/01/15/collections-ordereddict/" class="has-link-black-ter is-size-6">collections.ordereddict</a>
+                    <a href="/2019/01/15/collections-ordereddict/" class="has-link-black-ter is-size-6">collections.OrderedDict</a>
                     <p class="is-size-7 is-uppercase">
                         <a class="has-link-grey -link" href="/categories/Programming/">Programming</a> / <a class="has-link-grey -link" href="/categories/Programming/Python/">Python</a>
                     </p>
@@ -781,25 +829,6 @@
             </div>
         </article>
         
-        <article class="media">
-            
-            <a href="/2018/12/09/create-github-blog-with-hexo/" class="media-left">
-                <p class="image is-64x64">
-                    <img class="thumbnail" src="/images/hexo_logo.png" alt="Hexo를 이용한 GitHub 블로그 만들기">
-                </p>
-            </a>
-            
-            <div class="media-content">
-                <div class="content">
-                    <div><time class="has-text-grey is-size-7 is-uppercase" datetime="2018-12-09T12:47:22.000Z">2018-12-09</time></div>
-                    <a href="/2018/12/09/create-github-blog-with-hexo/" class="has-link-black-ter is-size-6">Hexo를 이용한 GitHub 블로그 만들기</a>
-                    <p class="is-size-7 is-uppercase">
-                        <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
-                    </p>
-                </div>
-            </div>
-        </article>
-        
     </div>
 </div>
 
@@ -818,7 +847,7 @@
                     <span class="level-item">January 2019</span>
                 </span>
                 <span class="level-end">
-                    <span class="level-item tag">4</span>
+                    <span class="level-item tag">5</span>
                 </span>
             </a>
         </li>
@@ -859,9 +888,31 @@
                 </li>
                 
                 <li>
+                    <a class="level is-marginless" href="/tags/C/">
+                        <span class="level-start">
+                            <span class="level-item">C#</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
                     <a class="level is-marginless" href="/tags/DISQUS/">
                         <span class="level-start">
                             <span class="level-item">DISQUS</span>
+                        </span>
+                        <span class="level-end">
+                            <span class="level-item tag">1</span>
+                        </span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="level is-marginless" href="/tags/Data-Type/">
+                        <span class="level-start">
+                            <span class="level-item">Data Type</span>
                         </span>
                         <span class="level-end">
                             <span class="level-item tag">1</span>

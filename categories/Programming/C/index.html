@@ -2,7 +2,7 @@
 <html lang="en">
 <head><meta name="generator" content="Hexo 3.8.0">
     <meta charset="utf-8">
-<title>Tag: Icarus - Ohdong&#39;s Blog</title>
+<title>Category: C# - Ohdong&#39;s Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
@@ -10,7 +10,7 @@
     <meta name="description" content="Share IT technology and daily information">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ohdong&#39;s Blog">
-<meta property="og:url" content="http://kwonohdong.github.io/tags/Icarus/index.html">
+<meta property="og:url" content="http://kwonohdong.github.io/categories/Programming/C/index.html">
 <meta property="og:site_name" content="Ohdong&#39;s Blog">
 <meta property="og:description" content="Share IT technology and daily information">
 <meta property="og:locale" content="en">
@@ -127,8 +127,11 @@
     <div class="card-content">
         <nav class="breadcrumb" aria-label="breadcrumbs">
         <ul>
-            <li><a href="/tags">Tags</a></li>
-            <li class="is-active"><a href="#" aria-current="page">Icarus</a></li>
+            <li><a href="/categories">Categories</a></li>
+            
+            <li><a href="/categories/Programming/">Programming</a></li>
+            
+            <li class="is-active"><a href="#" aria-current="page">C#</a></li>
         </ul>
         </nav>
     </div>
@@ -137,8 +140,8 @@
     <div class="card">
     
     <div class="card-image">
-        <a href="/2019/01/01/add-disqus-icarus-blog/" class="image is-7by1">
-            <img class="thumbnail" src="/images/enter_disqus_0.png" alt="Icarus 테마에 Comment Plugin - discus 추가하기">
+        <a href="/2019/01/15/c-sharp-datatype/" class="image is-7by1">
+            <img class="thumbnail" src="/images/c-sharp_logo.png" alt="C# 데이터 자료형">
         </a>
     </div>
     
@@ -146,17 +149,17 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-01-01T14:08:17.000Z">2019-01-01</time>
+                <time class="level-item has-text-grey" datetime="2019-01-15T12:50:57.000Z">2019-01-15</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/Blog/">Blog</a>
+                <a class="has-link-grey -link" href="/categories/Programming/">Programming</a>&nbsp;/&nbsp;<a class="has-link-grey -link" href="/categories/Programming/C/">C#</a>
                 </div>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 368 words)
+                    2 minutes read (About 282 words)
                 </span>
                 
             </div>
@@ -164,23 +167,128 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                <a class="has-link-black-ter" href="/2019/01/01/add-disqus-icarus-blog/">Icarus 테마에 Comment Plugin - discus 추가하기</a>
+                <a class="has-link-black-ter" href="/2019/01/15/c-sharp-datatype/">C# 데이터 자료형</a>
             
         </h1>
         <div class="content">
-            <hr>
-<h2 id="1-DISQUS-가입하기"><a href="#1-DISQUS-가입하기" class="headerlink" title="1. DISQUS 가입하기"></a><strong>1. DISQUS 가입하기</strong></h2><hr>
-<p>다음 링크를 <a href="https://disqus.com/" target="_blank" rel="noopener">DISQUS</a> 통하여 사이트에 가입합니다.<br><br></p>
-<hr>
-<h2 id="2-DISQUS-Website-추가하기"><a href="#2-DISQUS-Website-추가하기" class="headerlink" title="2. DISQUS Website 추가하기"></a><strong>2. DISQUS Website 추가하기</strong></h2><hr>
-<p>회원가입 완료 후, 아래 사진 절차를 따라 웹 사이트를 추가합니다.<br></p>
+            <p>현재 진행 중인 프로젝트안에서 Byte 단위로 데이터를 핸들링하는 작업을 하다보니 자료형의 크기와 범위가 정확히 기억이 나지않아 계산에 어려움이 있었다.<br>다시한번 자료형의 크기를 정리하며 상기하는 시간을 가져보자.</p>
+<p>C# 및 .NET 타입별 메모리의 크기와 표현 범위.</p>
+<p>※ 1 Byte = 8 Bit</p>
+<h2 id="고정소수점"><a href="#고정소수점" class="headerlink" title="- 고정소수점"></a>- 고정소수점</h2><table>
+<thead>
+<tr>
+<th style="text-align:left"><center><strong>자료형</strong></center></th>
+<th style="text-align:left"><center><strong>형식</strong></center></th>
+<th style="text-align:center"><center><strong>크기(byte)</strong></center></th>
+<th style="text-align:left"><center><strong>범위</strong></center></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">byte</td>
+<td style="text-align:left">System.byte</td>
+<td style="text-align:center"><center>1</center></td>
+<td style="text-align:left">0 ~ 255</td>
+</tr>
+<tr>
+<td style="text-align:left">Byte</td>
+<td style="text-align:left">System.Byte</td>
+<td style="text-align:center"><center>1</center></td>
+<td style="text-align:left">0 ~ 255</td>
+</tr>
+<tr>
+<td style="text-align:left">sbyte</td>
+<td style="text-align:left">System.sbyte</td>
+<td style="text-align:center"><center>1</center></td>
+<td style="text-align:left">-128 ~ 127</td>
+</tr>
+<tr>
+<td style="text-align:left">sByte</td>
+<td style="text-align:left">System.sByte</td>
+<td style="text-align:center"><center>1</center></td>
+<td style="text-align:left">-128 ~ 127</td>
+</tr>
+<tr>
+<td style="text-align:left">short</td>
+<td style="text-align:left">System.Int16</td>
+<td style="text-align:center"><center>2</center></td>
+<td style="text-align:left">–32,768 ~ 32,767</td>
+</tr>
+<tr>
+<td style="text-align:left">Int16</td>
+<td style="text-align:left">System.Int16</td>
+<td style="text-align:center"><center>2</center></td>
+<td style="text-align:left">–32,768 ~ 32,767</td>
+</tr>
+<tr>
+<td style="text-align:left">ushort</td>
+<td style="text-align:left">System.UInt16</td>
+<td style="text-align:center"><center>2</center></td>
+<td style="text-align:left">0 ~ 65,535</td>
+</tr>
+<tr>
+<td style="text-align:left">UInt16</td>
+<td style="text-align:left">System.UInt16</td>
+<td style="text-align:center"><center>2</center></td>
+<td style="text-align:left">0 ~ 65,535</td>
+</tr>
+<tr>
+<td style="text-align:left">Int</td>
+<td style="text-align:left">System.Int32</td>
+<td style="text-align:center"><center>4</center></td>
+<td style="text-align:left">–2,147,483,648 ~ 2,147,483,647</td>
+</tr>
+<tr>
+<td style="text-align:left">Int32</td>
+<td style="text-align:left">System.Int32</td>
+<td style="text-align:center"><center>4</center></td>
+<td style="text-align:left">–2,147,483,648 ~ 2,147,483,647</td>
+</tr>
+<tr>
+<td style="text-align:left">uint</td>
+<td style="text-align:left">System.UInt32</td>
+<td style="text-align:center"><center>4</center></td>
+<td style="text-align:left">0 ~ 4,294,967,295</td>
+</tr>
+<tr>
+<td style="text-align:left">UInt32</td>
+<td style="text-align:left">System.UInt32</td>
+<td style="text-align:center"><center>4</center></td>
+<td style="text-align:left">0 ~ 4,294,967,295</td>
+</tr>
+<tr>
+<td style="text-align:left">long</td>
+<td style="text-align:left">System.Int64</td>
+<td style="text-align:center"><center>8</center></td>
+<td style="text-align:left">–9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807</td>
+</tr>
+<tr>
+<td style="text-align:left">Int64</td>
+<td style="text-align:left">System.Int64</td>
+<td style="text-align:center"><center>8</center></td>
+<td style="text-align:left">–9,223,372,036,854,775,808 ~ 9,223,372,036,854,775,807</td>
+</tr>
+<tr>
+<td style="text-align:left">ulong</td>
+<td style="text-align:left">System.UInt64</td>
+<td style="text-align:center"><center>8</center></td>
+<td style="text-align:left">0 ~ 18,446,744,073,709,551,615</td>
+</tr>
+<tr>
+<td style="text-align:left">UInt64</td>
+<td style="text-align:left">System.UInt64</td>
+<td style="text-align:center"><center>8</center></td>
+<td style="text-align:left">0 ~ 18,446,744,073,709,551,615</td>
+</tr>
+</tbody>
+</table>
         </div>
         
         
         <div class="level is-mobile">
             <div class="level-start">
                 <div class="level-item">
-                <a class="button is-size-7 is-light" href="/2019/01/01/add-disqus-icarus-blog/#more">Read More</a>
+                <a class="button is-size-7 is-light" href="/2019/01/15/c-sharp-datatype/#more">Read More</a>
                 </div>
             </div>
         </div>
